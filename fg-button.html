@@ -1,14 +1,24 @@
-<!DOCTYPE html>
-<html>
+background-color: #ff2200;
+box-shadow: 0 9px #ff0000;
+}
 
-  <head>
-    <title>не кликай кнопку</title>
+#knopka:active {
+  background-color: #ff2200;
+  box-shadow: 0 5px #cc1b00;
+  transform: translateY(4px);
+}
+
+img {
+  border-radius: 50%;
+}
+
+</style>
   </head>
 
   <body>
-
+<div>
     <button onclick="Clicker()" id="knopka">Не нажимать</button>
-
+</div>
     <script type="text/javascript">
       var sk = 0;
       function Clicker() {
@@ -16,7 +26,9 @@
 "Не нажимать, эй!!", 
 "Это домогательство", 
 "Я вызываю полицию",
-"Я несовершеннолетняя кнопка"
+"Я несовершеннолетняя кнопка",
+"<img src=\"https://pa1.narvii.com/7208/a78c0611e0da2a2dfa91830d2b50b530396f693dr1-320-179_hq.gif\">",
+"FBI, open up!"
 ];
         var k = document.getElementById('knopka');
 if(t[sk]){        
