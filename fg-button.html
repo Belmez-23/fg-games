@@ -1,11 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <title>не кликай кнопку</title>
+<style>
+body { 
+	background: #eee; 	
+	margin:0px;
+	padding:0px;
+}
+
+div {
+position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
+
+#knopka {
+  display: inline-block;
+  padding: 50px 50px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ff4e33;
+  border: none;
+  border-radius: 45%;
+  box-shadow: 0 19px #ff2200;
+ 
+}
+
+#knopka:hover {
 background-color: #ff2200;
-box-shadow: 0 9px #ff0000;
+box-shadow: 0 19px #ff0000;
 }
 
 #knopka:active {
   background-color: #ff2200;
-  box-shadow: 0 5px #cc1b00;
-  transform: translateY(4px);
+  box-shadow: 0 15px #cc1b00;
+  transform: translateY(14px);
 }
 
 img {
@@ -42,3 +79,4 @@ else sk = 0;
   </body>
 
 </html>
+
