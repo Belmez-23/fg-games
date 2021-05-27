@@ -4,13 +4,22 @@
 <title>не кликай кнопку</title>
 </head>
 <body>
-<form>
-    <button onclick="Clicker()" id="knopka"> Не нажимать </button>
-</form>
-<script>
+
+    <button onclick="Clicker()" id="knopka">Не нажимать</button>
+
+<script type="text/javascript">
 function Clicker(){
- var knop document.getElementById("knopka");
- knop.innerHTML = 'Не нажимать!';
+    var text = ["Не нажимать!", "Не нажимать, эй!!"];
+ var knop document.getElementById('knopka');
+
+    
+    if (element.innerHTML===text[0])
+             knop.innerHTML = text[1];
+        else
+             knop.innerHTML = text[0];
+
+        return false;
 </script>
+    
 </body>
 </html>
