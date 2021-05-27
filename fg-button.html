@@ -18,7 +18,7 @@ position: absolute;
         transform: translate(-50%, -50%)
 }
 
-#knopka {
+button {
   display: inline-block;
   padding: 50px 50px;
   font-size: 24px;
@@ -34,12 +34,12 @@ position: absolute;
  
 }
 
-#knopka:hover {
+button:hover {
 background-color: #ff2200;
 box-shadow: 0 19px #ff0000;
 }
 
-#knopka:active {
+button:active {
   background-color: #ff2200;
   box-shadow: 0 5px #cc1b00;
   transform: translateY(14px);
@@ -53,7 +53,7 @@ img {
   </head>
 
   <body>
-<div>
+<div id="d">
     <button onclick="Clicker()" id="knopka">Не нажимать</button>
 </div>
     <script type="text/javascript">
@@ -65,11 +65,21 @@ img {
 "Я вызываю полицию",
 "Я несовершеннолетняя кнопка",
 "<img src=\"https://pa1.narvii.com/7208/a78c0611e0da2a2dfa91830d2b50b530396f693dr1-320-179_hq.gif\">",
-"FBI, open up!"
+"Это ФСБ, открывай!",
+"Открывать"
 ];
         var k = document.getElementById('knopka');
+	var nk = document.createElement("button");
 if(t[sk]){        
-k.innerHTML = t[sk++];
+k.innerHTML = t[sk];
+	if(t[sk] == "Открывать"){	
+	nk.innerHTML = "Не открывать";
+	nk.onclick = function() {
+nk.innerHTML = "Это не поможет";
+};
+	document.getElementById("d").appendChild(nk);
+}
+sk++;
 }
 else sk = 0;
       }
