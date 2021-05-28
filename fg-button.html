@@ -49,6 +49,17 @@ img {
   border-radius: 50%;
 }
 
+#kop {
+  position: relative;
+  cursor: pointer;
+  width: 177px;
+  height: 160px;
+  right: 0;
+  transition: right 5s cubic-bezier(0, 0, 1, 1);
+  right: 0;
+  transition: right 5s cubic-bezier(0, 0, 1, 1);
+  /* JavaScript ставит значение left: 450px */
+}
 </style>
   </head>
 
@@ -66,13 +77,18 @@ img {
 "Я несовершеннолетняя кнопка",
 "<img src=\"https://pa1.narvii.com/7208/a78c0611e0da2a2dfa91830d2b50b530396f693dr1-320-179_hq.gif\">",
 "Это ФСБ, открывай!",
-"Открывать"
+"Открывать",
+"Бац!"
 ];
         var k = document.getElementById('knopka');
 	var nk = document.createElement("button");
+	
 if(t[sk]){        
 k.innerHTML = t[sk];
-	if(t[sk] == "Открывать"){	
+
+	if(t[sk] == "Открывать"){
+	
+	nk.setAttribute("id","nknopka");
 	nk.innerHTML = "Не открывать";
 	nk.onclick = function() {
 nk.innerHTML = "Это не поможет";
@@ -80,13 +96,29 @@ nk.innerHTML = "Это не поможет";
 	nk.onmouseout = function() {
 document.getElementById("d").removeChild(nk);
 };
-		document.getElementById("d").appendChild(nk);
+	document.getElementById("d").appendChild(nk);
+
 }
+	if(t[sk] == "Бац!"){
+	document.getElementById("nknopka").remove();
+	var stuk = new Audio();
+	stuk.src = 'stuk.mp3';
+	stuk.autoplay = true;
+	var kop = document.createElement("img");
+	kop.setAttribute("id", "kop");
+	kop.setAttribute("src", "https://img.icons8.com/ultraviolet/452/fat-cop.png");
+	kop.setAttribute("onclick", "this.style.right='450px'");
+	document.getElementById("d").appendChild(kop);
+}
+	
 sk++;
+
 }
+
 else sk = 0;
       }
 
+	
     </script>
 
   </body>
