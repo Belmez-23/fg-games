@@ -1,10 +1,26 @@
 <?php
-
 $ishod = file('data.txt');
 //$ishod = $_POST;
 $s = explode(' ', $ishod[rand(0, 8)]);
-$ss = count($s); 
-$gachi = array('300 bucks', 'club', 'buddy', 'Ass', 'boy', 'Fuck', 'Fuck you', 'leather man', 'door', 'Deep dark fantasies', 'Dungeon master', 'Cumming', 'slave', 'Stick your finger', 'amazing');
+$ss = count($s);
+$gachi = array(
+    '300 bucks',
+    'club',
+    'buddy',
+    'Ass',
+    'boy',
+    'Fuck',
+    'Fuck you',
+    'leather man',
+    'door',
+    'Deep dark fantasies',
+    'Dungeon master',
+    'Cumming',
+    'slave',
+    'Stick your finger',
+    'amazing',
+    'fisting'
+);
 $gg = count($gachi);
 foreach ($gachi as $g) {
     $rs = rand(0, $ss);
@@ -14,5 +30,4 @@ foreach ($gachi as $g) {
 foreach ($s as $ass) {
     echo $ass . " ";
 }
-
 ?>
